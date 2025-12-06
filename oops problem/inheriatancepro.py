@@ -7,8 +7,10 @@ class Bankaccount:
         print("balance after deposite :",self.balance)
         return self.balance
     def withdraw(self):
-        self.with_amount=int(input("Enter the amount to withdraw"))
-        self.balance -=self.with_amount
+        self.with_amount=int(input("enter the amount to withdraw"))
+
+        self.balance -= self.with_amount
+        print("balance after withdrawal",self.balance)
 
         return self.balance
 
@@ -16,12 +18,13 @@ class Bankaccount:
 class Minimum_Balance_Account(Bankaccount):
     def __init__(self):
         Bankaccount.__init__(self)
-        self.minimum_balance=int(input("Enter the min balance:"))
+        self.minimum_balance = int(input("Enter the min balance:"))
     def withdraw1(self):
-        self.with_amount=int(input("Enter the amount to withdraw"))
-        if self.balance - self.with_amount < self.minimum_balance:
+        with_amount=int(input("Enter the amount to withdraw"))
+        if self.balance - with_amount< self.minimum_balance:
             print("Sorry , the min balance should be maintained so withdrawing is not possible ")
         else:
+            self.with_amount=with_amount
             Bankaccount.withdraw(self)
 
 m=Minimum_Balance_Account()
