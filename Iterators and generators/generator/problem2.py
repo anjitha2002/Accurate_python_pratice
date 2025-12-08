@@ -4,7 +4,7 @@ def readfiles(files):
         file=open(f,'r')
         for line in file:
             yield line
-def long_line(lines,n=8):
+def long_line(lines,n=40):
     return(line for line in lines if len(line)>n)
 
 def printlines(lines):
