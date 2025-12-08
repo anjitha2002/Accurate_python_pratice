@@ -6,7 +6,7 @@ def count_lines(path):
     for entry in os.listdir(path):
         full_path=os.path.join(path,entry)
         if os.path.isfile(full_path) and full_path.endswith(".py"):
-            file=open(full_path,'r',encoding="utf-8")
+            file=open(full_path,'r')
             total_lines +=len(file.readlines())
         else:
             total_lines +=count_lines(full_path)

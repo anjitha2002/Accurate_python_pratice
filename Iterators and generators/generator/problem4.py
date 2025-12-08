@@ -10,4 +10,4 @@ def count_files(path):
         else:
             count +=count_files(full_path)
     return count
-print(count_files(r"C:/Users/ASUS/PycharmProjects/Accurate pratice/Iterators and generators"))
+print(count_files(r"C:/Users/ASUS/PycharmProjects/Accurate pratice/Iterators and generators" ))
